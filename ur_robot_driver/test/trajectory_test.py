@@ -77,8 +77,8 @@ class TrajectoryTest(unittest.TestCase):
         self.client.wait_for_result()
 
         self.assertEqual(self.client.get_result().error_code,
-                         FollowJointTrajectoryResult.SUCCESSFUL)
-        rospy.loginfo("Received result SUCCESSFUL")
+                         FollowJointTrajectoryResult.INVALID_GOAL)
+        rospy.loginfo("Received result ?")
 
     def test_illegal_trajectory(self):
         """Test trajectory server. This is more of a validation test that the testing suite does the
